@@ -1,0 +1,59 @@
+<section class="ftco-section ftco-cart mt-5">
+  <div class="container mt-2">
+    <h2>L'historique des Commandes</h2>
+
+
+    <div class="mt-5 d-flex flex-wrap justify-content-around">
+      {{#each commandes}}
+      <div class="order-container my-5 mx-3">
+        <div class="cart-detail cart-total ftco-bg-dark d-flex flex-column justify-content-between">
+          <div>
+            <h3 class="billing-heading">Commande <b class="ml-1">#{{this.id_commande}}</b></h3>
+            <figcaption class="billing-heading-date blockquote-footer"><em>{{this.date}}</em></figcaption>
+            <span class="text-end w-100 mt-4">
+              <u>etat:</u>
+              {{#ifNotEquals this.nom "terminée"}}
+              <cite class="billing-subheading">En {{this.nom}}</cite>
+              {{/ifNotEquals}}
+              {{#ifEquals this.nom "terminée"}}
+              <cite class="billing-subheading">{{this.nom}}</cite>
+              {{/ifEquals}}
+            </span>
+            <hr>
+          </div>
+          <div>
+
+            {{#each produits}}
+            <p class="d-flex">
+              <span>{{quantite}} x {{nom}}</span>
+              <span>${{total}}</span>
+            </p>
+            {{/each}}
+            <hr>
+            <p class="d-flex total-price">
+              <span>Totale</span>
+              <span>${{total}}</span>
+            </p>
+            <hr>
+
+            <form class="input-group form-etat" novalidate>
+              <div class="d-flex flex-column align-items-start">
+                <select class="form-select form-select-sm h-100" required>
+                  <option selected hidden value="">Changer l'etat du commande</option>
+                  <option value="2">En Cuisine</option>
+                  <option value="3">En livraison</option>
+                  <option value="4">Terminée</option>
+                </select>
+                <div class="error-message error-etat">Champ obligatoire</div>
+              </div>
+              <input type="submit" class="btn btn-outline-secondary btn-sm btn-change-state" name="submit"
+                id="{{this.id_commande}}" value="Appliquer" />
+            </form>
+          </div>
+
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+.input-group select {
+  border: 1px solid #c49b63;
+  background: transparent;
+  color: #c49b63;
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  outline: none;
+}
+.quantity-input-group input[type="number"] {
+  border: 1px solid #c49b63;
+  background: transparent;
+  color: #c49b63;
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  width: 80px;
+  outline: none;
+  background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20viewBox%3D%220%200%2050%2067%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%222%22%3E%3Cline%20x1%3D%221%22%20x2%3D%2250%22%20y1%3D%2233.5%22%20y2%3D%2233.5%22%20stroke%3D%22%23c49b63%22%2F%3E%3Cpolyline%20transform%3D%22translate%2825%2020%29%20rotate%2845%29%20translate%28-25%20-20%29%22%20points%3D%2219%2026%2019%2014%2032%2014%22%20stroke%3D%22%23c49b63%22%2F%3E%3Cpolyline%20transform%3D%22translate%2825%2045%29%20rotate%28225%29%20translate%28-25%20-45%29%22%20points%3D%2219%2052%2019%2039%2032%2039%22%20stroke%3D%22%23c49b63%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  caret-color: transparent;
+}
+.quantity-input-group input[type="number"]::-webkit-inner-spin-button,
+.quantity-input-group input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  border-width: 0px;
+  margin: 0;
+  padding-left: 1px;
+  border-left: 1px solid #c49b63;
+  height: 34px;
+  width: 23px;
+  cursor: pointer;
+}
+
+.cart-list::-webkit-scrollbar {
+  background: #624a2a;
+  border: 1px solid #c49b63;
+  height: 8px;
+}
+
+/* Handle */
+.cart-list::-webkit-scrollbar-thumb {
+  background: #c49b63;
+  /* border-radius: 20px; */
+}
+
+.order-container {
+  border: 1px solid #c49b63;
+  border-radius: 3px;
+  min-width: 300px;
+  max-width: 400px;
+}
+.order-container > .cart-detail {
+  height: 100%;
+}
+
+.total-price {}
